@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-search',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  search: string;
+  //@Output() searchEmmiter = new EventEmitter<any>();
+
   constructor() { }
+
+  //emmitUser() {
+    //this.searchEmmiter.emit(this.search);
+  //}
 
   ngOnInit(): void {
   }
