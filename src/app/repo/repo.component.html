@@ -1,15 +1,15 @@
 <div class="jumbotron">
     <h1>Repositories</h1>
     <h3>number of repositories found.</h3>
-    <app-search></app-search>
+    <app-search (searchEmmiter)="findRepo($event)"></app-search>
 </div>
-<div class="card">
-    <div class="card-header"></div>
+<div class="card" *ngFor="let repo of myRepo">
+    <div class="card-header">{{Repo.name}}</div>
     <div class="card-body">
-        <p id="descr"></p>
-        <p id="language"></p>
+        <p id="descr">{{Repo.description}}</p>
+        <p id="language">{{}Repo.language}</p>
     </div>
     <div class="card-footer">
-        <p id="forks"></p>
+        <p id="forks">{{Repo.forks}}</p>
     </div>
 </div>
