@@ -9,13 +9,13 @@ import { EventEmitter } from 'protractor';
 export class SearchComponent implements OnInit {
 
   search: string;
-  //@Output() searchEmmiter = new EventEmitter<any>();
+  @Output() searchEmmiter = new EventEmitter();
 
   constructor() { }
 
-  //emmitUser() {
-    //this.searchEmmiter.emit(this.search);
-  //}
+  emmitUser() {
+    this.searchEmmiter.emit(this.search);
+  }
 
   ngOnInit(): void {
   }
