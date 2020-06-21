@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GithubUser } from '../github-user';
 
 
 @Component({
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  user: GithubUser[];
   
 
 

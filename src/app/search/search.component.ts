@@ -1,5 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { EventEmitter } from 'protractor';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-search',

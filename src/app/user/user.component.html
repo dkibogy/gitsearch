@@ -1,16 +1,16 @@
 <div class="container">
     <div class="row">
-        <app-search></app-search>
+        <app-search (searchEmitter)="userSearched($event)"></app-search>
         <div class="col-md-6 mb-4">
             <img src="">
         </div>
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title"></h4>
+                <h4 class="card-title">{{GithubUser.name}}</h4>
                 <ul>
-                    <li>followers</li>
-                    <li>following </li>
-                    <li>repos</li>
+                    <li>followers: {{GithubUser.followers}}</li>
+                    <li>following: {{GithubUser.following}} </li>
+                    <li>repos: {{GithubUser.repo}</li>
                 </ul>
             </div>
         </div>
