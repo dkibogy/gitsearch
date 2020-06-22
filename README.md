@@ -10,6 +10,7 @@ This is a website where users may enter a GitHub username into a form, submit it
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
 
 ## Live Site
+https://dkibogy.github.io/gitsearch
 
 ## Technologies Used
 - Angular
