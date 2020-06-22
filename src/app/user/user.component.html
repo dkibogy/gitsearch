@@ -1,18 +1,38 @@
 <div class="container">
-    <div class="row">
-        <app-search (searchEmitter)="userSearched($event)"></app-search>
-        <div class="col-md-6 mb-4">
-            <img src="">
+    <div class="text-inline">
+        <h2 class="mb-5 text-center"> User Search</h2>
+        <app-search (searchEmmiter)="userSearched($event)"></app-search>
+    </div>
+    <div class="card" *ngFor='let user of user'>
+        <div class="card-header">
+            
+            <span>{{user.name}}</span>
         </div>
-        <div class="card" *ngFor="let user of user">
-            <div class="card-body">
-                <h4 class="card-title">{{user.name}}</h4>
-                <ul>
-                    <li>followers: {{user.followers}}</li>
-                    <li>following: {{user.following}} </li>
-                    <li>repos: {{user.repo}</li>
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="card-img-top" src="{{user.avatar_url}}" alt="">
+            </div>
+            <div class="col-sm-6">
+                <ul class="list-group">
+                    <li class="list-group-items">
+                        <span class="">Following: {{user.followers}}</span>
+                        <span>Followers: {{user.following}}</span>
+                        <span>Repos: {{user.public_repo}}</span>
+                    </li>
+                    <li class="list-group-items">{{user.bio}} </li>
+                    <li class="list-group-items">{{user.location}}</li>
+                    <li class="list-group-items">{{user.company}}</li>
                 </ul>
             </div>
         </div>
     </div>
+
 </div>
+
+
+
+
+
+
+
+

@@ -15,7 +15,7 @@ export class UserComponent implements OnInit {
 
 
   constructor(private service: GitServiceService) { }
-  getSearchedUser(search) {
+  userSearched(search) {
     this.service.searchMyUser(search).then(
       (success) => {
         this.user = this.service.user;
@@ -27,7 +27,8 @@ export class UserComponent implements OnInit {
     )
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.userSearched('dkibogy')
   }
 
 }
