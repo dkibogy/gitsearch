@@ -10,6 +10,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { SearchComponent } from './search/search.component';
 import { UserComponent } from './user/user.component';
 import { RepoComponent } from './repo/repo.component';
+import { DatePipe } from './date.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RepoComponent } from './repo/repo.component';
     NavigationComponent,
     SearchComponent,
     UserComponent,
-    RepoComponent
+    RepoComponent,
+    DatePipe
   ],
   imports: [
     BrowserModule,

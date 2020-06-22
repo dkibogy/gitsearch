@@ -3,13 +3,18 @@
     <br>
     <app-search (searchEmmiter)="findRepo($event)"></app-search>
 </div>
-<div class="card" *ngFor="let Repo of myRepo">
-    <div class="card-header">{{Repo.name}}</div>
-    <div class="card-body">
-        <p id="descr">{{Repo.description}}</p>
-        <p id="language">{{Repo.language}}</p>
-    </div>
-    <div class="card-footer">
-        <p id="forks">{{Repo.forks}}</p>
+<div class="columns mb-4">
+    <div class="card" *ngFor="let Repo of myRepo">
+        <div class="col-sm-6">
+            <div class="card-header">Project Name: {{Repo.name}}</div>
+            <div class="card-body">
+                <p>Description: {{Repo.description}}</p>
+                <p>Language: {{Repo.language}}</p>
+            </div>
+            <div class="card-footer">
+                <p id="forks">forked: {{Repo.forks}}</p>
+            </div>
+        </div>
     </div>
 </div>
+
