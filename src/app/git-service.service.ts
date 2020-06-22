@@ -19,7 +19,7 @@ export class GitServiceService {
   constructor(private http: HttpClient) { }
 
   searchMyUser(search: string){
-    interface apiResponse {
+    interface data {
       avatar: string;
       user: string;
       following: string;
@@ -32,7 +32,7 @@ export class GitServiceService {
     }
     return new Promise((resolve, reject) => {
       this.user = [];
-      this.http.get<apiResponse>(this.url + search + this.token).toPromise().then(
+      this.http.get<data>(this.url + search + this.token).toPromise().then(
         (results) => {
           this.user.push(results);
           resolve();

@@ -12,16 +12,16 @@ import { RepoServiceService } from '../repo-service.service';
 export class RepoComponent implements OnInit {
   myRepo: Repo[];
 
-  constructor(public repo: RepoServiceService) { }
+  constructor(public reposerve: RepoServiceService) { }
   findRepo(search:string) {
-    this.repo.getRepo(search).subscribe(data => {
-      this.myRepo =data;
+    this.reposerve.findRepo(search).subscribe(data => {
+      this.myRepo = data;
       console.log(this.myRepo)
-    })
+    });
   }
 
   ngOnInit() {
-    this.findRepo('dkibogy')
+    this.findRepo('dkibogy');
   }
 
 }
