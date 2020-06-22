@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
+// how many hours ago 
 @Pipe({
   name: 'date'
 })
