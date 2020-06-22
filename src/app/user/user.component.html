@@ -3,25 +3,24 @@
         <h2 class="mb-5 text-center"> User Search</h2>
         <app-search (searchEmmiter)="userSearched($event)"></app-search>
     </div>
+    <br>
     <div class="card" *ngFor='let user of user'>
         <div class="card-header">
             
-            <span>{{user.name}}</span>
+            <span><strong>{{user.name}}</strong></span>
         </div>
         <div class="row">
             <div class="col-sm-6">
                 <img class="card-img-top" src="{{user.avatar_url}}" alt="">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 mb-4">
                 <ul class="list-group">
-                    <li class="list-group-items">
-                        <span class="">Following: {{user.followers}}</span>
-                        <span>Followers: {{user.following}}</span>
-                        <span>Repos: {{user.public_repo}}</span>
-                    </li>
-                    <li class="list-group-items">{{user.bio}} </li>
-                    <li class="list-group-items">{{user.location}}</li>
-                    <li class="list-group-items">{{user.company}}</li>
+                    <li class="list-group-item">Following: {{user.followers}}</li>
+                    <li class="list-group-item">Followers: {{user.following}}</li>
+                    <li class="list-group-item">Repos: {{user.public_repos}}</li>
+                    <li class="list-group-item">Bio: {{user.bio}} </li>
+                    <li  class="list-group-item">Located at: {{user.location}}</li>
+                    <li class="list-group-item">Works at: {{user.company}}</li>
                 </ul>
             </div>
         </div>

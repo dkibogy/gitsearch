@@ -3,14 +3,13 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     text-emphasis-color: black;
 }
 #navigation {
     background-color: darksalmon;
 }
-.container{
+#navigation{
     display: flex;
     justify-content: space-around;
     align-items: center;
